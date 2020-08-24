@@ -1,0 +1,9 @@
+## Rubbish
+.DS_Store
+
+## Various settings
+xcuserdata/
+
+## Ruby
+.bundle/
+vendor/

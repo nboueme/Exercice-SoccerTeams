@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		E5D2746224F4377E00964924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2746124F4377E00964924 /* AppDelegate.swift */; };
-		E5D2746424F4377E00964924 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2746324F4377E00964924 /* SceneDelegate.swift */; };
 		E5D2746624F4377E00964924 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2746524F4377E00964924 /* ViewController.swift */; };
 		E5D2746924F4377E00964924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D2746724F4377E00964924 /* Main.storyboard */; };
 		E5D2746B24F4378400964924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5D2746A24F4378400964924 /* Assets.xcassets */; };
 		E5D2746E24F4378400964924 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D2746C24F4378400964924 /* LaunchScreen.storyboard */; };
 		E5D2747924F4378400964924 /* FootballTeamsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2747824F4378400964924 /* FootballTeamsTests.swift */; };
+		E5D2748724F4380300964924 /* swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E5D2748524F4380300964924 /* swiftlint.yml */; };
+		E5D2748824F4380300964924 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = E5D2748624F4380300964924 /* swiftgen.yml */; };
+		E5D2749124F439A200964924 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5D2749324F439A200964924 /* Localizable.strings */; };
+		E5D2749724F43A2200964924 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2749424F43A2200964924 /* Assets.swift */; };
+		E5D2749824F43A2200964924 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2749524F43A2200964924 /* Strings.swift */; };
+		E5D2749924F43A2200964924 /* StoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2749624F43A2200964924 /* StoryboardScenes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,9 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E5D2745E24F4377E00964924 /* FootballTeams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballTeams.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5D2745E24F4377E00964924 /* FB Teams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FB Teams.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D2746124F4377E00964924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E5D2746324F4377E00964924 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E5D2746524F4377E00964924 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E5D2746824F4377E00964924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E5D2746A24F4378400964924 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +42,12 @@
 		E5D2747424F4378400964924 /* FootballTeamsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballTeamsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D2747824F4378400964924 /* FootballTeamsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballTeamsTests.swift; sourceTree = "<group>"; };
 		E5D2747A24F4378400964924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5D2748524F4380300964924 /* swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftlint.yml; sourceTree = "<group>"; };
+		E5D2748624F4380300964924 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		E5D2749224F439A200964924 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E5D2749424F43A2200964924 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		E5D2749524F43A2200964924 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		E5D2749624F43A2200964924 /* StoryboardScenes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardScenes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +71,8 @@
 		E5D2745524F4377E00964924 = {
 			isa = PBXGroup;
 			children = (
+				E5D2748624F4380300964924 /* swiftgen.yml */,
+				E5D2748524F4380300964924 /* swiftlint.yml */,
 				E5D2746024F4377E00964924 /* FootballTeams */,
 				E5D2747724F4378400964924 /* FootballTeamsTests */,
 				E5D2745F24F4377E00964924 /* Products */,
@@ -70,7 +82,7 @@
 		E5D2745F24F4377E00964924 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E5D2745E24F4377E00964924 /* FootballTeams.app */,
+				E5D2745E24F4377E00964924 /* FB Teams.app */,
 				E5D2747424F4378400964924 /* FootballTeamsTests.xctest */,
 			);
 			name = Products;
@@ -79,12 +91,10 @@
 		E5D2746024F4377E00964924 /* FootballTeams */ = {
 			isa = PBXGroup;
 			children = (
-				E5D2746124F4377E00964924 /* AppDelegate.swift */,
-				E5D2746324F4377E00964924 /* SceneDelegate.swift */,
-				E5D2746524F4377E00964924 /* ViewController.swift */,
-				E5D2746724F4377E00964924 /* Main.storyboard */,
-				E5D2746A24F4378400964924 /* Assets.xcassets */,
-				E5D2746C24F4378400964924 /* LaunchScreen.storyboard */,
+				E5D2748924F4389700964924 /* Application */,
+				E5D2748A24F4389E00964924 /* Model */,
+				E5D2748B24F438A600964924 /* View */,
+				E5D2748C24F438B000964924 /* Presenter */,
 				E5D2746F24F4378400964924 /* Info.plist */,
 			);
 			path = FootballTeams;
@@ -99,6 +109,91 @@
 			path = FootballTeamsTests;
 			sourceTree = "<group>";
 		};
+		E5D2748924F4389700964924 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E5D2749D24F43B2D00964924 /* Coordinator */,
+				E5D2749C24F43B2300964924 /* Extensions */,
+				E5D2748E24F438FF00964924 /* Resources */,
+				E5D2748D24F438E300964924 /* Generated */,
+				E5D2746124F4377E00964924 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E5D2748A24F4389E00964924 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E5D2748B24F438A600964924 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E5D2749A24F43AEC00964924 /* Home */,
+				E5D2749B24F43B1300964924 /* Players */,
+				E5D2746524F4377E00964924 /* ViewController.swift */,
+				E5D2746724F4377E00964924 /* Main.storyboard */,
+				E5D2746C24F4378400964924 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E5D2748C24F438B000964924 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E5D2748D24F438E300964924 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				E5D2749424F43A2200964924 /* Assets.swift */,
+				E5D2749624F43A2200964924 /* StoryboardScenes.swift */,
+				E5D2749524F43A2200964924 /* Strings.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		E5D2748E24F438FF00964924 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E5D2746A24F4378400964924 /* Assets.xcassets */,
+				E5D2749324F439A200964924 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E5D2749A24F43AEC00964924 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E5D2749B24F43B1300964924 /* Players */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
+		E5D2749C24F43B2300964924 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E5D2749D24F43B2D00964924 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,6 +204,8 @@
 				E5D2745A24F4377E00964924 /* Sources */,
 				E5D2745B24F4377E00964924 /* Frameworks */,
 				E5D2745C24F4377E00964924 /* Resources */,
+				E5D2748324F437BC00964924 /* 💪 SwiftGen 👌 */,
+				E5D2748424F437C000964924 /* 💪 SwiftLint 👌 */,
 			);
 			buildRules = (
 			);
@@ -116,7 +213,7 @@
 			);
 			name = FootballTeams;
 			productName = FootballTeams;
-			productReference = E5D2745E24F4377E00964924 /* FootballTeams.app */;
+			productReference = E5D2745E24F4377E00964924 /* FB Teams.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E5D2747324F4378400964924 /* FootballTeamsTests */ = {
@@ -181,6 +278,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5D2746E24F4378400964924 /* LaunchScreen.storyboard in Resources */,
+				E5D2749124F439A200964924 /* Localizable.strings in Resources */,
+				E5D2748824F4380300964924 /* swiftgen.yml in Resources */,
+				E5D2748724F4380300964924 /* swiftlint.yml in Resources */,
 				E5D2746B24F4378400964924 /* Assets.xcassets in Resources */,
 				E5D2746924F4377E00964924 /* Main.storyboard in Resources */,
 			);
@@ -195,6 +295,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E5D2748324F437BC00964924 /* 💪 SwiftGen 👌 */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "💪 SwiftGen 👌";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftgen >/dev/null; then\n  swiftgen\nelse\n  echo \"warning: SwiftGen not installed, download from https://github.com/SwiftGen/SwiftGen\"\nfi\n";
+		};
+		E5D2748424F437C000964924 /* 💪 SwiftLint 👌 */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "💪 SwiftLint 👌";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint --config swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E5D2745A24F4377E00964924 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -202,7 +341,9 @@
 			files = (
 				E5D2746624F4377E00964924 /* ViewController.swift in Sources */,
 				E5D2746224F4377E00964924 /* AppDelegate.swift in Sources */,
-				E5D2746424F4377E00964924 /* SceneDelegate.swift in Sources */,
+				E5D2749824F43A2200964924 /* Strings.swift in Sources */,
+				E5D2749724F43A2200964924 /* Assets.swift in Sources */,
+				E5D2749924F43A2200964924 /* StoryboardScenes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +380,14 @@
 				E5D2746D24F4378400964924 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E5D2749324F439A200964924 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5D2749224F439A200964924 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -370,9 +519,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nboueme.FootballTeams;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "FB Teams";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -388,9 +537,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nboueme.FootballTeams;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "FB Teams";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
