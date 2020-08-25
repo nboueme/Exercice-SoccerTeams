@@ -12,15 +12,20 @@ import UIKit
 
 // swiftlint:disable explicit_type_interface identifier_name line_length type_body_length type_name
 internal enum StoryboardScene {
+  internal enum Home: StoryboardType {
+    internal static let storyboardName = "Home"
+
+    internal static let homeViewController = SceneType<FB_Teams.HomeViewController>(storyboard: Home.self, identifier: "HomeViewController")
+  }
   internal enum LaunchScreen: StoryboardType {
     internal static let storyboardName = "LaunchScreen"
 
     internal static let initialScene = InitialSceneType<UIKit.UIViewController>(storyboard: LaunchScreen.self)
   }
-  internal enum Main: StoryboardType {
-    internal static let storyboardName = "Main"
+  internal enum Players: StoryboardType {
+    internal static let storyboardName = "Players"
 
-    internal static let initialScene = InitialSceneType<FB_Teams.ViewController>(storyboard: Main.self)
+    internal static let playersViewController = SceneType<FB_Teams.PlayersViewController>(storyboard: Players.self, identifier: "PlayersViewController")
   }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name
