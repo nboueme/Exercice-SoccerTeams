@@ -12,9 +12,10 @@ import Kingfisher
 class BadgeCell: UICollectionViewCell {
     static let identifier = "BadgeCell"
     
-    // MARK: - Properties
+    // MARK: - Outlets
     @IBOutlet weak var teamBadge: UIImageView!
     
+    // MARK: - Properties
     var teamBadgeStringURL: String! {
         didSet {
             guard let teamBadgeURL = URL(string: teamBadgeStringURL) else { return }
