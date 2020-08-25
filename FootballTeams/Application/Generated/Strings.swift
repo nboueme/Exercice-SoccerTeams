@@ -11,6 +11,18 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name
 internal enum L10n {
+
+  internal enum Button {
+    /// Cancel
+    internal static let cancel = L10n.tr("Localizable", "button.cancel")
+  }
+
+  internal enum Home {
+    internal enum SearchBar {
+      /// Search a championship
+      internal static let placeholder = L10n.tr("Localizable", "home.searchBar.placeholder")
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name
