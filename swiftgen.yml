@@ -1,17 +1,17 @@
 xcassets:
-    inputs: FootballTeams/Application/Resources/
+    inputs: SoccerTeams/Application/Resources/
     filter: .+\.xcassets$
     outputs:
         templateName: swift4
-        output: FootballTeams/Application/Generated/Assets.swift
+        output: SoccerTeams/Application/Generated/Assets.swift
 ib:
-    inputs: FootballTeams/View/
+    inputs: SoccerTeams/View/
     filter: .+\.storyboard$
     outputs:
         templateName: scenes-swift4
-        output: FootballTeams/Application/Generated/StoryboardScenes.swift
+        output: SoccerTeams/Application/Generated/StoryboardScenes.swift
 strings:
-    inputs: FootballTeams/Application/Resources/en.lproj/Localizable.strings
+    inputs: SoccerTeams/Application/Resources/en.lproj/Localizable.strings
     outputs:
         templateName: structured-swift4
-        output: FootballTeams/Application/Generated/Strings.swift
+        output: SoccerTeams/Application/Generated/Strings.swift

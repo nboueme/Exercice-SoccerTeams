@@ -1,0 +1,6 @@
+framework module Pods_SoccerTeams {
+  umbrella header "Pods-SoccerTeams-umbrella.h"
+
+  export *
+  module * { export * }
+}
