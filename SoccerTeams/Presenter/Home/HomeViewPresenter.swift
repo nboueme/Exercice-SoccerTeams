@@ -15,7 +15,7 @@ protocol HomeViewDelegate: class {
 class HomeViewPresenter {
     // MARK: - Properties
     private weak var delegate: HomeViewDelegate?
-    private let service: ApiService
+    private let service: NetworkService
     private(set) var soccerLeagues = [League]()
     private(set) var filteredLeagues = [League]()
     private(set) var teams = [Team]() {
@@ -25,16 +25,20 @@ class HomeViewPresenter {
     }
     
     // MARK: - Constructor
-    init(_ delegate: HomeViewDelegate, service: ApiService = ApiService()) {
+    init(_ delegate: HomeViewDelegate, service: NetworkService = NetworkService()) {
         self.delegate = delegate
         self.service = service
     }
     
     // MARK: - Business Logic
     func getSoccerLeagues() {
-        service.fetchLeagues { [weak self] data in
-            guard let leagues = try? data.get() else { return }
-            self?.soccerLeagues = leagues.all.filter { $0.sport == League.Sport.soccer }
+        service.fetch(fromRoute: Routes.allLeagues) { [weak self] result in
+            switch result {
+            case .success(let leagues):
+                self?.soccerLeagues = leagues.all.filter { $0.sport == League.Sport.soccer }
+            case .failure(let error):
+                print(error)
+            }
         }
     }
     
@@ -44,9 +48,13 @@ class HomeViewPresenter {
             return
         }
         
-        service.fetchTeams(for: league.name) { [weak self] data in
-            guard let teams = try? data.get() else { return }
-            self?.teams = teams.all
+        service.fetch(fromRoute: Routes.allTeams(in: league.name)) { [weak self] result in
+            switch result {
+            case .success(let teams):
+                self?.teams = teams.all
+            case .failure(let error):
+                print(error)
+            }
         }
     }
     

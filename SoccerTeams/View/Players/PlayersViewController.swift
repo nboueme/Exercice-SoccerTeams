@@ -19,6 +19,7 @@ class PlayersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        presenter.getPlayers()
     }
 }
 
@@ -33,18 +34,21 @@ extension PlayersViewController {
 // MARK: - Presenter Delegate
 extension PlayersViewController: PlayersViewDelegate {
     func reloadDataSource() {
-        playersTableView.reloadData()
+        DispatchQueue.main.async {
+            self.playersTableView.reloadData()
+        }
     }
 }
 
 // MARK: - UITableViewDataSource
 extension PlayersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return presenter.players.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PlayerCell.identifier, for: indexPath as IndexPath) as! PlayerCell
+        cell.player = presenter.players[indexPath.row]
         return cell
     }
 }

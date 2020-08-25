@@ -22,9 +22,20 @@ class PlayerCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var position: UILabel!
     @IBOutlet weak var birthdate: UILabel!
-    @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var transferAmount: UILabel!
     
     // MARK: - Properties
+    var player: Player! {
+        didSet {
+            name.text = player.fullname
+            position.text = player.position
+            birthdate.text = player.birthdate
+            transferAmount.text = player.transferAmount
+            
+            guard let photoURL = URL(string: player.photoURL) else { return }
+            playerPhoto.kf.setImage(with: photoURL)
+        }
+    }
 }
 
 // MARK: - Private functions

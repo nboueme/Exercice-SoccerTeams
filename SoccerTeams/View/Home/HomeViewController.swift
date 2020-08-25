@@ -59,7 +59,7 @@ extension HomeViewController: UICollectionViewDataSource {
 // MARK: - Collection Delegate Flow
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        coordinator?.players(for: presenter.teams[indexPath.row].name)
+        coordinator?.players(for: presenter.teams[indexPath.row])
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
