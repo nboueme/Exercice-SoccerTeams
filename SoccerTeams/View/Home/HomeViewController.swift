@@ -9,11 +9,11 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    // MARK: - Properties
-    @IBOutlet weak var badgesCollectionView: UICollectionView!
-    
     weak var coordinator: MainCoordinator?
     var presenter: HomeViewPresenter!
+    
+    // MARK: - Outlets
+    @IBOutlet weak var badgesCollectionView: UICollectionView!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
