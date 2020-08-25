@@ -36,11 +36,11 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(viewController, animated: false)
     }
     
-    func players(for teamName: String) {
+    func players(for team: Team) {
         let viewController = PlayersViewController.instantiate(storyboardName: StoryboardScene.Players.storyboardName)
         viewController.coordinator = self
-        viewController.presenter = PlayersViewPresenter(viewController)
-        viewController.title = teamName
+        viewController.presenter = PlayersViewPresenter(viewController, team: team)
+        viewController.title = team.name
         navigationController.pushViewController(viewController, animated: true)
     }
 }
