@@ -12,15 +12,9 @@ import Quick
 import Nimble
 
 class LeagueStorageSpec: QuickSpec {
-    let leagues = [
-        League(leagueId: "1", name: "Ligue 1", alternateName: "Uber Eats 1", sport: .soccer),
-        League(leagueId: "2", name: "Ligue 2", alternateName: nil, sport: .soccer),
-        League(leagueId: "3", name: "Ligue 3", alternateName: "Uber Eats 3", sport: .soccer)
-    ]
-    
     override func spec() {
         beforeEach {
-            LeagueStorage.save(leagues: self.leagues)
+            LeagueStorage.save(leagues: FakeLeague.leagues)
         }
         
         describe("LeagueStorage") {
@@ -30,17 +24,17 @@ class LeagueStorageSpec: QuickSpec {
             }
             
             it("findBy: league.name") {
-                let league = LeagueStorage.find(by: "Ligue 2")
+                let league = LeagueStorage.find(by: FakeLeague.league2.name)
                 
                 expect(league).toNot(beNil())
                 expect(league!.alternateName).to(beNil())
             }
             
             it("findBy: league.alternateName") {
-                let league = LeagueStorage.find(by: "Uber Eats 1")
+                let league = LeagueStorage.find(by: FakeLeague.league1.alternateName!)
                 
                 expect(league).toNot(beNil())
-                expect(league!.name).to(equal("Ligue 1"))
+                expect(league!.name).to(equal(FakeLeague.league1.name))
             }
         }
     }

@@ -12,12 +12,7 @@ final class MockLeagueRepository: LeagueRepository {
     private var leagues = [League]()
     
     func findAll(completion: @escaping LeaguesCompletion) {
-        let leagues = [
-            League(leagueId: "1", name: "Ligue 1", alternateName: "Uber Eats 1", sport: .soccer),
-            League(leagueId: "2", name: "Ligue 2", alternateName: nil, sport: .soccer),
-            League(leagueId: "3", name: "Ligue 3", alternateName: "Uber Eats 3", sport: .soccer)
-        ]
-        completion(.success(leagues))
+        completion(.success(FakeLeague.leagues))
     }
     
     func saveToLocalStorage(leagues: [League]) {

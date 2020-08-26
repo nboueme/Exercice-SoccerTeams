@@ -24,7 +24,7 @@ class PlayersViewPresenter {
        }
     
     // MARK: - Constructor
-    init(_ delegate: PlayersViewDelegate, playerRepository: PlayerRepository, team: Team) {
+    init(_ delegate: PlayersViewDelegate?, playerRepository: PlayerRepository, team: Team) {
         self.delegate = delegate
         self.playerRepository = playerRepository
         self.team = team

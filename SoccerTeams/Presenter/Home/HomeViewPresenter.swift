@@ -31,7 +31,7 @@ class HomeViewPresenter {
     }
     
     // MARK: - Constructor
-    init(_ delegate: HomeViewDelegate, leagueRepository: LeagueRepository, teamRepository: TeamRepository) {
+    init(_ delegate: HomeViewDelegate?, leagueRepository: LeagueRepository, teamRepository: TeamRepository) {
         self.delegate = delegate
         self.leagueRepository = leagueRepository
         self.teamRepository = teamRepository

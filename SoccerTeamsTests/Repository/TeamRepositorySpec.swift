@@ -25,7 +25,7 @@ class TeamRepositorySpec: QuickSpec {
             it("findAll: remote") {
                 var teams = [Team]()
                 
-                repository.findAll(by: "Ligue 1") { result in
+                repository.findAll(by: FakeLeague.league1.name) { result in
                     guard let fetchedTeams = try? result.get() else { return }
                     teams = fetchedTeams
                     expectation.fulfill()
@@ -34,7 +34,7 @@ class TeamRepositorySpec: QuickSpec {
                 waitForExpectations()
                 
                 expect(teams.count).toNot(equal(0))
-                expect(teams.count).to(equal(2))
+                expect(teams.count).to(equal(FakeTeam.teamsLeague1.count))
             }
         }
         

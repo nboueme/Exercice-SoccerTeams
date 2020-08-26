@@ -34,7 +34,7 @@ class LeagueRepositorySpec: QuickSpec {
                 waitForExpectations()
                 
                 expect(leagues.count).toNot(equal(0))
-                expect(leagues.count).to(equal(3))
+                expect(leagues.count).to(equal(FakeLeague.leagues.count))
             }
             
             it("findAll: local") {
@@ -48,7 +48,7 @@ class LeagueRepositorySpec: QuickSpec {
                 
                 let leagues = repository.findAllInLocalStorage()
                 expect(leagues.count).toNot(equal(0))
-                expect(leagues.count).to(equal(3))
+                expect(leagues.count).to(equal(FakeLeague.leagues.count))
             }
             
             it("findOne: local") {
@@ -60,9 +60,9 @@ class LeagueRepositorySpec: QuickSpec {
                 
                 waitForExpectations()
                 
-                let league = repository.findInLocalStorage(by: "Uber Eats 3")
+                let league = repository.findInLocalStorage(by: FakeLeague.league3.alternateName!)
                 expect(league).toNot(beNil())
-                expect(league!.name).to(equal("Ligue 3"))
+                expect(league!.name).to(equal(FakeLeague.league3.name))
             }
         }
         
