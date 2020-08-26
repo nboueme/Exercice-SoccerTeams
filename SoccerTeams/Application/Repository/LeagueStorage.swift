@@ -27,9 +27,9 @@ final class LeagueStorage {
     static func find(by leagueName: String) -> League? {
         leagues.first { league in
             if let alternateName = league.alternateName {
-                return alternateName.lowercased().contains(leagueName.lowercased()) || league.name.lowercased().contains(leagueName.lowercased())
+                return alternateName.lowercased() == leagueName.lowercased() || league.name.lowercased() == leagueName.lowercased()
             } else {
-                return league.name.lowercased().contains(leagueName.lowercased())
+                return league.name.lowercased() == leagueName.lowercased()
             }
         }
     }

@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		1A97992BF164283A84FFECA0 /* Pods_SoccerTeamsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3D8C099BA9FD9909A9206C /* Pods_SoccerTeamsTests.framework */; };
 		39AA316AD685BE2046278AAB /* Pods_SoccerTeams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431864D898EE4ACC8D6C9436 /* Pods_SoccerTeams.framework */; };
+		E52BB96524F6F52C00C20D33 /* MockLeagueRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52BB96424F6F52C00C20D33 /* MockLeagueRepository.swift */; };
+		E52BB96824F6FE2200C20D33 /* MockTeamRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52BB96724F6FE2200C20D33 /* MockTeamRepository.swift */; };
+		E52BB96A24F6FE5800C20D33 /* MockPlayerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52BB96924F6FE5800C20D33 /* MockPlayerRepository.swift */; };
+		E52BB96C24F7004C00C20D33 /* TeamRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52BB96B24F7004C00C20D33 /* TeamRepositorySpec.swift */; };
+		E52BB96E24F700F600C20D33 /* PlayerRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52BB96D24F700F600C20D33 /* PlayerRepositorySpec.swift */; };
+		E52BB97024F701F300C20D33 /* LeagueStorageSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52BB96F24F701F300C20D33 /* LeagueStorageSpec.swift */; };
 		E535293E24F43F670003605C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E535293D24F43F670003605C /* HomeViewController.swift */; };
 		E535294024F43F870003605C /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E535293F24F43F870003605C /* PlayersViewController.swift */; };
 		E5561E6524F59BDC006C8B54 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5561E6424F59BDC006C8B54 /* Route.swift */; };
@@ -24,7 +30,7 @@
 		E5D2746224F4377E00964924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2746124F4377E00964924 /* AppDelegate.swift */; };
 		E5D2746B24F4378400964924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5D2746A24F4378400964924 /* Assets.xcassets */; };
 		E5D2746E24F4378400964924 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D2746C24F4378400964924 /* LaunchScreen.storyboard */; };
-		E5D2747924F4378400964924 /* SoccerTeamsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2747824F4378400964924 /* SoccerTeamsTests.swift */; };
+		E5D2747924F4378400964924 /* LeagueRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2747824F4378400964924 /* LeagueRepositorySpec.swift */; };
 		E5D2748724F4380300964924 /* swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E5D2748524F4380300964924 /* swiftlint.yml */; };
 		E5D2748824F4380300964924 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = E5D2748624F4380300964924 /* swiftgen.yml */; };
 		E5D2749124F439A200964924 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5D2749324F439A200964924 /* Localizable.strings */; };
@@ -61,6 +67,12 @@
 		B508798F96796086830A654A /* Pods-SoccerTeams.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerTeams.debug.xcconfig"; path = "Target Support Files/Pods-SoccerTeams/Pods-SoccerTeams.debug.xcconfig"; sourceTree = "<group>"; };
 		CF3D8C099BA9FD9909A9206C /* Pods_SoccerTeamsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoccerTeamsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8CBB8553FD65D95CE1EAC1A /* Pods-SoccerTeamsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerTeamsTests.debug.xcconfig"; path = "Target Support Files/Pods-SoccerTeamsTests/Pods-SoccerTeamsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E52BB96424F6F52C00C20D33 /* MockLeagueRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLeagueRepository.swift; sourceTree = "<group>"; };
+		E52BB96724F6FE2200C20D33 /* MockTeamRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTeamRepository.swift; sourceTree = "<group>"; };
+		E52BB96924F6FE5800C20D33 /* MockPlayerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPlayerRepository.swift; sourceTree = "<group>"; };
+		E52BB96B24F7004C00C20D33 /* TeamRepositorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRepositorySpec.swift; sourceTree = "<group>"; };
+		E52BB96D24F700F600C20D33 /* PlayerRepositorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRepositorySpec.swift; sourceTree = "<group>"; };
+		E52BB96F24F701F300C20D33 /* LeagueStorageSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueStorageSpec.swift; sourceTree = "<group>"; };
 		E535293D24F43F670003605C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E535293F24F43F870003605C /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
 		E5561E6424F59BDC006C8B54 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
@@ -79,7 +91,7 @@
 		E5D2746D24F4378400964924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5D2746F24F4378400964924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5D2747424F4378400964924 /* SoccerTeamsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoccerTeamsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5D2747824F4378400964924 /* SoccerTeamsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoccerTeamsTests.swift; sourceTree = "<group>"; };
+		E5D2747824F4378400964924 /* LeagueRepositorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueRepositorySpec.swift; sourceTree = "<group>"; };
 		E5D2747A24F4378400964924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5D2748524F4380300964924 /* swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftlint.yml; sourceTree = "<group>"; };
 		E5D2748624F4380300964924 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
@@ -140,6 +152,28 @@
 				CF3D8C099BA9FD9909A9206C /* Pods_SoccerTeamsTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E52BB96324F6F50D00C20D33 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				E52BB96624F6F53C00C20D33 /* Mocks */,
+				E5D2747824F4378400964924 /* LeagueRepositorySpec.swift */,
+				E52BB96B24F7004C00C20D33 /* TeamRepositorySpec.swift */,
+				E52BB96D24F700F600C20D33 /* PlayerRepositorySpec.swift */,
+				E52BB96F24F701F300C20D33 /* LeagueStorageSpec.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		E52BB96624F6F53C00C20D33 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E52BB96424F6F52C00C20D33 /* MockLeagueRepository.swift */,
+				E52BB96724F6FE2200C20D33 /* MockTeamRepository.swift */,
+				E52BB96924F6FE5800C20D33 /* MockPlayerRepository.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		E58AAB1D24F4557C004F418E /* Home */ = {
@@ -205,7 +239,7 @@
 		E5D2747724F4378400964924 /* SoccerTeamsTests */ = {
 			isa = PBXGroup;
 			children = (
-				E5D2747824F4378400964924 /* SoccerTeamsTests.swift */,
+				E52BB96324F6F50D00C20D33 /* Repository */,
 				E5D2747A24F4378400964924 /* Info.plist */,
 			);
 			path = SoccerTeamsTests;
@@ -594,7 +628,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which slather >/dev/null; then\n  slather coverage --html --scheme SoccerTeams --workspace SoccerTeams.xcworkspace SoccerTeams.xcodeproj\nelse\n  echo \"warning: slather not installed, download from https://github.com/SlatherOrg/slather\"\nfi \n";
+			shellScript = "if which slather >/dev/null; then\n  #echo \"slather\"\n  slather coverage --html --scheme SoccerTeams --workspace SoccerTeams.xcworkspace SoccerTeams.xcodeproj\nelse\n  echo \"warning: slather not installed, download from https://github.com/SlatherOrg/slather\"\nfi \n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -636,7 +670,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5D2747924F4378400964924 /* SoccerTeamsTests.swift in Sources */,
+				E52BB96A24F6FE5800C20D33 /* MockPlayerRepository.swift in Sources */,
+				E52BB97024F701F300C20D33 /* LeagueStorageSpec.swift in Sources */,
+				E52BB96E24F700F600C20D33 /* PlayerRepositorySpec.swift in Sources */,
+				E52BB96C24F7004C00C20D33 /* TeamRepositorySpec.swift in Sources */,
+				E52BB96824F6FE2200C20D33 /* MockTeamRepository.swift in Sources */,
+				E52BB96524F6F52C00C20D33 /* MockLeagueRepository.swift in Sources */,
+				E5D2747924F4378400964924 /* LeagueRepositorySpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -806,6 +846,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = B96N5PJKRG;
 				INFOPLIST_FILE = SoccerTeams/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -825,6 +866,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = B96N5PJKRG;
 				INFOPLIST_FILE = SoccerTeams/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
