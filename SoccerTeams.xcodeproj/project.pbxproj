@@ -472,7 +472,6 @@
 				E5D2747024F4378400964924 /* Sources */,
 				E5D2747124F4378400964924 /* Frameworks */,
 				E5D2747224F4378400964924 /* Resources */,
-				E5D7873624F6D4DE00B4D8B5 /* 💪 Slather 👌 */,
 				097F39914EEE280EA6B1A3B7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -661,24 +660,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint --config swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		E5D7873624F6D4DE00B4D8B5 /* 💪 Slather 👌 */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "💪 Slather 👌";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which slather >/dev/null; then\n  #echo \"slather\"\n  slather coverage --html --scheme SoccerTeams --workspace SoccerTeams.xcworkspace SoccerTeams.xcodeproj\nelse\n  echo \"warning: slather not installed, download from https://github.com/SlatherOrg/slather\"\nfi \n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
