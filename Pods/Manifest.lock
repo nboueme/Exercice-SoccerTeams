@@ -2,17 +2,21 @@ PODS:
   - Kingfisher (5.14.1):
     - Kingfisher/Core (= 5.14.1)
   - Kingfisher/Core (5.14.1)
+  - ModernSearchBar (1.5)
 
 DEPENDENCIES:
   - Kingfisher
+  - ModernSearchBar
 
 SPEC REPOS:
   trunk:
     - Kingfisher
+    - ModernSearchBar
 
 SPEC CHECKSUMS:
   Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
+  ModernSearchBar: 5dd19c94b1e04f1f83dd9b9950d05153ef2535e5
 
-PODFILE CHECKSUM: a57eda388342e65c03eab122db74e559e9e91ac8
+PODFILE CHECKSUM: c2380356fbb499fa657e6d1ded6881963c215a8e
 
 COCOAPODS: 1.9.3
