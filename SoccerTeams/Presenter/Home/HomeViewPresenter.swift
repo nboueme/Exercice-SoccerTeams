@@ -17,13 +17,12 @@ class HomeViewPresenter {
     // MARK: - Properties
     private weak var delegate: HomeViewDelegate?
     private let service: NetworkService
-    private(set) var soccerLeagues = [League]() {
+    private(set) var soccerLeagues = LeagueStorage.findAll() {
         didSet {
             let leaguesName = soccerLeagues.map { $0.name } + soccerLeagues.compactMap { $0.alternateName }
             delegate?.setAutocompleteData(with: leaguesName.sorted())
         }
     }
-    private(set) var filteredLeagues = [League]()
     private(set) var teams = [Team]() {
         didSet {
             delegate?.reloadDataSource()
@@ -41,7 +40,9 @@ class HomeViewPresenter {
         service.fetch(fromRoute: Routes.allLeagues) { [weak self] result in
             switch result {
             case .success(let leagues):
-                self?.soccerLeagues = leagues.all.filter { $0.sport == League.Sport.soccer }
+                let soccerLeagues = leagues.all.filter { $0.sport == League.Sport.soccer }
+                LeagueStorage.save(leagues: soccerLeagues)
+                self?.soccerLeagues = soccerLeagues
             case .failure(let error):
                 print(error)
             }
@@ -49,7 +50,7 @@ class HomeViewPresenter {
     }
     
     func getTeams(for leagueName: String) {
-        guard let league = getLeague(by: leagueName) else { return }
+        guard let league = LeagueStorage.find(by: leagueName) else { return }
         
         service.fetch(fromRoute: Routes.allTeams(in: league.name)) { [weak self] result in
             switch result {
@@ -63,18 +64,5 @@ class HomeViewPresenter {
     
     func resetTeams() {
         teams = []
-    }
-}
-
-// MARK: - Private functions
-extension HomeViewPresenter {
-    private func getLeague(by leagueName: String) -> League? {
-        soccerLeagues.first { league in
-            if let alternateName = league.alternateName {
-                return alternateName.lowercased().contains(leagueName.lowercased()) || league.name.lowercased().contains(leagueName.lowercased())
-            } else {
-                return league.name.lowercased().contains(leagueName.lowercased())
-            }
-        }
     }
 }
