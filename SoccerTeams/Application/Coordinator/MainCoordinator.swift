@@ -28,11 +28,6 @@ class MainCoordinator: Coordinator {
         let viewController = HomeViewController.instantiate(storyboardName: StoryboardScene.Home.storyboardName)
         viewController.coordinator = self
         viewController.presenter = HomeViewPresenter(viewController)
-        
-        let searchController = setupSearchBar()
-        searchController.searchResultsUpdater = viewController
-        viewController.navigationItem.searchController = searchController
-        
         navigationController.pushViewController(viewController, animated: false)
     }
     
@@ -55,12 +50,5 @@ extension MainCoordinator {
     private func setupWindow() {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
-    }
-    
-    private func setupSearchBar() -> UISearchController {
-        let searchController = UISearchController(searchResultsController: nil)
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = L10n.Home.SearchBar.placeholder
-        return searchController
     }
 }
