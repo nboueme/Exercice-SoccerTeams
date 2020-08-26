@@ -3,20 +3,28 @@ PODS:
     - Kingfisher/Core (= 5.14.1)
   - Kingfisher/Core (5.14.1)
   - ModernSearchBar (1.5)
+  - Nimble (8.1.1)
+  - Quick (3.0.0)
 
 DEPENDENCIES:
   - Kingfisher
   - ModernSearchBar
+  - Nimble
+  - Quick
 
 SPEC REPOS:
   trunk:
     - Kingfisher
     - ModernSearchBar
+    - Nimble
+    - Quick
 
 SPEC CHECKSUMS:
   Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
   ModernSearchBar: 5dd19c94b1e04f1f83dd9b9950d05153ef2535e5
+  Nimble: 5f8a2fb6fa343a7242dfdd9d42f7267419d464b2
+  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
 
-PODFILE CHECKSUM: c2380356fbb499fa657e6d1ded6881963c215a8e
+PODFILE CHECKSUM: 60ab7233071b56065c6feeb4c4dc6ece05f37339
 
 COCOAPODS: 1.9.3

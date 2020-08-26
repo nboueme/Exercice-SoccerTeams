@@ -24,7 +24,7 @@
 		E5D2746224F4377E00964924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2746124F4377E00964924 /* AppDelegate.swift */; };
 		E5D2746B24F4378400964924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5D2746A24F4378400964924 /* Assets.xcassets */; };
 		E5D2746E24F4378400964924 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D2746C24F4378400964924 /* LaunchScreen.storyboard */; };
-		E5D2747924F4378400964924 /* FootballTeamsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2747824F4378400964924 /* FootballTeamsTests.swift */; };
+		E5D2747924F4378400964924 /* SoccerTeamsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2747824F4378400964924 /* SoccerTeamsTests.swift */; };
 		E5D2748724F4380300964924 /* swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E5D2748524F4380300964924 /* swiftlint.yml */; };
 		E5D2748824F4380300964924 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = E5D2748624F4380300964924 /* swiftgen.yml */; };
 		E5D2749124F439A200964924 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5D2749324F439A200964924 /* Localizable.strings */; };
@@ -79,7 +79,7 @@
 		E5D2746D24F4378400964924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5D2746F24F4378400964924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5D2747424F4378400964924 /* SoccerTeamsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoccerTeamsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5D2747824F4378400964924 /* FootballTeamsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballTeamsTests.swift; sourceTree = "<group>"; };
+		E5D2747824F4378400964924 /* SoccerTeamsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoccerTeamsTests.swift; sourceTree = "<group>"; };
 		E5D2747A24F4378400964924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5D2748524F4380300964924 /* swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftlint.yml; sourceTree = "<group>"; };
 		E5D2748624F4380300964924 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
@@ -205,7 +205,7 @@
 		E5D2747724F4378400964924 /* SoccerTeamsTests */ = {
 			isa = PBXGroup;
 			children = (
-				E5D2747824F4378400964924 /* FootballTeamsTests.swift */,
+				E5D2747824F4378400964924 /* SoccerTeamsTests.swift */,
 				E5D2747A24F4378400964924 /* Info.plist */,
 			);
 			path = SoccerTeamsTests;
@@ -388,6 +388,8 @@
 				E5D2747024F4378400964924 /* Sources */,
 				E5D2747124F4378400964924 /* Frameworks */,
 				E5D2747224F4378400964924 /* Resources */,
+				E5D7873624F6D4DE00B4D8B5 /* 💪 Slather 👌 */,
+				097F39914EEE280EA6B1A3B7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -462,6 +464,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		097F39914EEE280EA6B1A3B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SoccerTeamsTests/Pods-SoccerTeamsTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SoccerTeamsTests/Pods-SoccerTeamsTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SoccerTeamsTests/Pods-SoccerTeamsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		26123069E68EE255559BA75D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -559,6 +578,24 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint --config swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		E5D7873624F6D4DE00B4D8B5 /* 💪 Slather 👌 */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "💪 Slather 👌";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which slather >/dev/null; then\n  slather coverage --html --scheme SoccerTeams --workspace SoccerTeams.xcworkspace SoccerTeams.xcodeproj\nelse\n  echo \"warning: slather not installed, download from https://github.com/SlatherOrg/slather\"\nfi \n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -599,7 +636,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5D2747924F4378400964924 /* FootballTeamsTests.swift in Sources */,
+				E5D2747924F4378400964924 /* SoccerTeamsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -809,7 +846,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B96N5PJKRG;
-				INFOPLIST_FILE = FootballTeamsTests/Info.plist;
+				INFOPLIST_FILE = SoccerTeamsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -832,7 +869,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B96N5PJKRG;
-				INFOPLIST_FILE = FootballTeamsTests/Info.plist;
+				INFOPLIST_FILE = SoccerTeamsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

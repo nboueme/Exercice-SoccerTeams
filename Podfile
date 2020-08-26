@@ -7,5 +7,7 @@ target 'SoccerTeams' do
   
   target 'SoccerTeamsTests' do
       inherit! :search_paths
+      pod 'Quick'
+      pod 'Nimble'
   end
 end
