@@ -12,17 +12,19 @@ struct Player {
     let position: String
     let birthdate: String
     let transferAmount: String
-    let photoURL: String
+    let photoCutout: String?
+    let photoThumb: String?
 }
 
 extension Player: Decodable {
     enum CodingKeys: String, CodingKey {
         case playerId = "idPlayer"
-        case fullname = "strName"
-        case position = "position"
-        case birthdate
-        case transferAmount
-        case photoURL
+        case fullname = "strPlayer"
+        case position = "strPosition"
+        case birthdate = "dateBorn"
+        case transferAmount = "strSigning"
+        case photoCutout = "strCutout"
+        case photoThumb = "strThumb"
     }
 }
 
@@ -32,6 +34,6 @@ struct Players {
 
 extension Players: Decodable {
     enum CodingKeys: String, CodingKey {
-        case all = "teams"
+        case all = "player"
     }
 }

@@ -9,5 +9,6 @@
 // Home View
 "home.searchBar.placeholder" = "Search a championship";
 
-// Buttons
-"button.cancel" = "Cancel";
+// Players View
+"player.birthdate" = "birthdate: %@";
+"player.price" = "price: %@";

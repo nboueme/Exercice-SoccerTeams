@@ -29,11 +29,14 @@ class PlayerCell: UITableViewCell {
         didSet {
             name.text = player.fullname
             position.text = player.position
-            birthdate.text = player.birthdate
-            transferAmount.text = player.transferAmount
+            birthdate.text = L10n.Player.birthdate(player.birthdate)
+            transferAmount.text = L10n.Player.price(player.transferAmount)
             
-            guard let photoURL = URL(string: player.photoURL) else { return }
-            playerPhoto.kf.setImage(with: photoURL)
+            if let link = player.photoCutout, let url = URL(string: link) {
+                playerPhoto.kf.setImage(with: url)
+            } else if let link = player.photoThumb, let url = URL(string: link) {
+                playerPhoto.kf.setImage(with: url)
+            }
         }
     }
 }
