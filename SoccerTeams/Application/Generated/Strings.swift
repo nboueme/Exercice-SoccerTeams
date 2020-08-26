@@ -12,15 +12,21 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name
 internal enum L10n {
 
-  internal enum Button {
-    /// Cancel
-    internal static let cancel = L10n.tr("Localizable", "button.cancel")
-  }
-
   internal enum Home {
     internal enum SearchBar {
       /// Search a championship
       internal static let placeholder = L10n.tr("Localizable", "home.searchBar.placeholder")
+    }
+  }
+
+  internal enum Player {
+    /// birthdate: %@
+    internal static func birthdate(_ p1: String) -> String {
+      return L10n.tr("Localizable", "player.birthdate", p1)
+    }
+    /// price: %@
+    internal static func price(_ p1: String) -> String {
+      return L10n.tr("Localizable", "player.price", p1)
     }
   }
 }

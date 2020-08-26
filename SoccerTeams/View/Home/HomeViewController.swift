@@ -30,6 +30,7 @@ extension HomeViewController {
     private func setupSearchBar() {
         modernSearchBar = ModernSearchBar()
         modernSearchBar.delegateModernSearchBar = self
+        modernSearchBar.placeholder = L10n.Home.SearchBar.placeholder
         navigationItem.titleView = modernSearchBar
     }
 }

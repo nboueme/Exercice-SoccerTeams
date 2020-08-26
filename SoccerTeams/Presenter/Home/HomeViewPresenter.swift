@@ -16,14 +16,14 @@ protocol HomeViewDelegate: class {
 class HomeViewPresenter {
     // MARK: - Properties
     private weak var delegate: HomeViewDelegate?
-    private let service: NetworkService
+    private let leagueRepository: LeagueRepository
+    private let teamRepository: TeamRepository
     private(set) var soccerLeagues = [League]() {
         didSet {
             let leaguesName = soccerLeagues.map { $0.name } + soccerLeagues.compactMap { $0.alternateName }
             delegate?.setAutocompleteData(with: leaguesName.sorted())
         }
     }
-    private(set) var filteredLeagues = [League]()
     private(set) var teams = [Team]() {
         didSet {
             delegate?.reloadDataSource()
@@ -31,17 +31,25 @@ class HomeViewPresenter {
     }
     
     // MARK: - Constructor
-    init(_ delegate: HomeViewDelegate, service: NetworkService = NetworkService()) {
+    init(_ delegate: HomeViewDelegate?, leagueRepository: LeagueRepository, teamRepository: TeamRepository) {
         self.delegate = delegate
-        self.service = service
+        self.leagueRepository = leagueRepository
+        self.teamRepository = teamRepository
     }
     
     // MARK: - Business Logic
     func getSoccerLeagues() {
-        service.fetch(fromRoute: Routes.allLeagues) { [weak self] result in
+        let localLeagues = leagueRepository.findAllInLocalStorage()
+        guard localLeagues.count == 0 else {
+            soccerLeagues = localLeagues
+            return
+        }
+        
+        leagueRepository.findAll { [weak self] result in
             switch result {
             case .success(let leagues):
-                self?.soccerLeagues = leagues.all.filter { $0.sport == League.Sport.soccer }
+                self?.leagueRepository.saveToLocalStorage(leagues: leagues)
+                self?.soccerLeagues = leagues
             case .failure(let error):
                 print(error)
             }
@@ -49,12 +57,12 @@ class HomeViewPresenter {
     }
     
     func getTeams(for leagueName: String) {
-        guard let league = getLeague(by: leagueName) else { return }
+        guard let league = leagueRepository.findInLocalStorage(by: leagueName) else { return }
         
-        service.fetch(fromRoute: Routes.allTeams(in: league.name)) { [weak self] result in
+        teamRepository.findAll(by: league.name) { [weak self] result in
             switch result {
             case .success(let teams):
-                self?.teams = teams.all
+                self?.teams = teams
             case .failure(let error):
                 print(error)
             }
@@ -63,18 +71,5 @@ class HomeViewPresenter {
     
     func resetTeams() {
         teams = []
-    }
-}
-
-// MARK: - Private functions
-extension HomeViewPresenter {
-    private func getLeague(by leagueName: String) -> League? {
-        soccerLeagues.first { league in
-            if let alternateName = league.alternateName {
-                return alternateName.lowercased().contains(leagueName.lowercased()) || league.name.lowercased().contains(leagueName.lowercased())
-            } else {
-                return league.name.lowercased().contains(leagueName.lowercased())
-            }
-        }
     }
 }
