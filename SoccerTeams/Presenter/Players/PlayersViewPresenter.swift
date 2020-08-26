@@ -15,7 +15,7 @@ protocol PlayersViewDelegate: class {
 class PlayersViewPresenter {
     // MARK: - Properties
     private weak var delegate: PlayersViewDelegate?
-    private let service: NetworkService
+    private let playerRepository: PlayerRepository
     private let team: Team
     private(set) var players = [Player]() {
            didSet {
@@ -24,18 +24,18 @@ class PlayersViewPresenter {
        }
     
     // MARK: - Constructor
-    init(_ delegate: PlayersViewDelegate, service: NetworkService = NetworkService(), team: Team) {
+    init(_ delegate: PlayersViewDelegate, playerRepository: PlayerRepository, team: Team) {
         self.delegate = delegate
-        self.service = service
+        self.playerRepository = playerRepository
         self.team = team
     }
     
     // MARK: - Business Logic
     func getPlayers() {
-        service.fetch(fromRoute: Routes.allPlayers(in: team.name)) { [weak self] result in
+        playerRepository.findAll(by: team.name) { [weak self] result in
             switch result {
             case .success(let players):
-                self?.players = players.all
+                self?.players = players
             case .failure(let error):
                 print(error)
             }

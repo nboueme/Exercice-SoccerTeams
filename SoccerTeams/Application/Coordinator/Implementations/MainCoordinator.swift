@@ -27,14 +27,14 @@ class MainCoordinator: Coordinator {
     func start() {
         let viewController = HomeViewController.instantiate(storyboardName: StoryboardScene.Home.storyboardName)
         viewController.coordinator = self
-        viewController.presenter = HomeViewPresenter(viewController)
+        viewController.presenter = HomeViewPresenter(viewController, leagueRepository: WebLeagueRepository(), teamRepository: WebTeamRepository())
         navigationController.pushViewController(viewController, animated: false)
     }
     
     func players(for team: Team) {
         let viewController = PlayersViewController.instantiate(storyboardName: StoryboardScene.Players.storyboardName)
         viewController.coordinator = self
-        viewController.presenter = PlayersViewPresenter(viewController, team: team)
+        viewController.presenter = PlayersViewPresenter(viewController, playerRepository: WebPlayerRepository(), team: team)
         viewController.title = team.name
         navigationController.pushViewController(viewController, animated: true)
     }
